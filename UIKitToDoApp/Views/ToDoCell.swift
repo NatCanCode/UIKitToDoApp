@@ -39,8 +39,6 @@ class ToDoCell: UITableViewCell {
 
         addSubview(statusLabel)
         statusLabel.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
-
-//        UITableView.tableFooterView = UIView()
     }
 
     required init?(coder: NSCoder) {
