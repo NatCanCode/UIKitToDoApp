@@ -28,6 +28,9 @@
 		ACFE1B302B7CF697006CD597 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B2F2B7CF697006CD597 /* Extensions.swift */; };
 		ACFE1B312B7CF697006CD597 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B2F2B7CF697006CD597 /* Extensions.swift */; };
 		ACFE1B322B7CF697006CD597 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B2F2B7CF697006CD597 /* Extensions.swift */; };
+		ACFE1B342B7D04F0006CD597 /* CreateToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B332B7D04F0006CD597 /* CreateToDoController.swift */; };
+		ACFE1B352B7D04F0006CD597 /* CreateToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B332B7D04F0006CD597 /* CreateToDoController.swift */; };
+		ACFE1B362B7D04F0006CD597 /* CreateToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE1B332B7D04F0006CD597 /* CreateToDoController.swift */; };
 		BB4BDDC8D24B81105169BFBB /* Pods_UIKitToDoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03609FA8678E8EB00ED1BE34 /* Pods_UIKitToDoAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,7 @@
 		ACFE1B212B7CB6BB006CD597 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACFE1B272B7CC9FA006CD597 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		ACFE1B2F2B7CF697006CD597 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ACFE1B332B7D04F0006CD597 /* CreateToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoController.swift; sourceTree = "<group>"; };
 		BAB4F0E1B94940A4BAC0AC44 /* Pods-UIKitToDoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitToDoApp.release.xcconfig"; path = "Target Support Files/Pods-UIKitToDoApp/Pods-UIKitToDoApp.release.xcconfig"; sourceTree = "<group>"; };
 		D0456BFE50EC87A4AFFA2348 /* Pods-UIKitToDoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitToDoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-UIKitToDoAppTests/Pods-UIKitToDoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA48BCD5F7495F0B524BA806 /* Pods_UIKitToDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitToDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				ACFE1AF22B7BF701006CD597 /* ViewController.swift */,
+				ACFE1B332B7D04F0006CD597 /* CreateToDoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -465,6 +470,7 @@
 			files = (
 				ACFE1AF32B7BF701006CD597 /* ViewController.swift in Sources */,
 				ACFE1B302B7CF697006CD597 /* Extensions.swift in Sources */,
+				ACFE1B342B7D04F0006CD597 /* CreateToDoController.swift in Sources */,
 				ACFE1AEF2B7BF701006CD597 /* AppDelegate.swift in Sources */,
 				ACFE1AF92B7BF701006CD597 /* UIKitToDoApp.xcdatamodeld in Sources */,
 				ACFE1AF12B7BF701006CD597 /* SceneDelegate.swift in Sources */,
@@ -479,6 +485,7 @@
 				ACFE1B092B7BF705006CD597 /* UIKitToDoAppTests.swift in Sources */,
 				ACFE1B312B7CF697006CD597 /* Extensions.swift in Sources */,
 				ACFE1B292B7CC9FA006CD597 /* ToDoCell.swift in Sources */,
+				ACFE1B352B7D04F0006CD597 /* CreateToDoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFE1B132B7BF705006CD597 /* UIKitToDoAppUITests.swift in Sources */,
+				ACFE1B362B7D04F0006CD597 /* CreateToDoController.swift in Sources */,
 				ACFE1B2A2B7CC9FA006CD597 /* ToDoCell.swift in Sources */,
 				ACFE1B152B7BF705006CD597 /* UIKitToDoAppUITestsLaunchTests.swift in Sources */,
 				ACFE1B322B7CF697006CD597 /* Extensions.swift in Sources */,

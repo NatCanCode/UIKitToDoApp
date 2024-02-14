@@ -36,7 +36,10 @@ class ViewController: UITableViewController {
     // MARK: Selectors
 
     @objc func createNewToDo() {
-        print(#function)
+//        print(#function) // Display function name
+
+        let vc = CreateToDoController()
+        present(vc, animated: true, completion: nil) // Display pop up modal when plus button tapped
     }
 
     // MARK: Helper functions
