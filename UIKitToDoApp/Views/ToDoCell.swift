@@ -11,10 +11,24 @@ class ToDoCell: UITableViewCell {
 
     // MARK: Properties
 
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Title"
+        label.font = .boldSystemFont(ofSize: 24)
+        label.textColor = .white
+        return label
+    }()
+
     // MARK: Lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        backgroundColor = .purple
+
+        addSubview(titleLabel)
+        titleLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
+
     }
 
     required init?(coder: NSCoder) {
