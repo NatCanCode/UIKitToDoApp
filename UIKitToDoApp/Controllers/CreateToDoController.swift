@@ -27,6 +27,10 @@ class CreateToDoController: UIViewController {
         textField.textColor = .black
         textField.backgroundColor = .lightGray
         textField.layer.cornerRadius = 8
+
+        let paddingView = UIView(frame: CGRectMake(0, 0, 15, textField.frame.height)) // Create inner padding
+        textField.leftView = paddingView
+        textField.leftViewMode = UITextField.ViewMode.always
 //        textField.keyboardAppearance = .dark
 //        textField.keyboardType = .numberPad
 
