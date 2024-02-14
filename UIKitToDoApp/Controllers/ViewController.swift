@@ -28,11 +28,11 @@ class ViewController: UITableViewController {
 
         tableView.register(ToDoCell.self, forCellReuseIdentifier: reuseIdentifier)
 
-        tableView.rowHeight = 100
+        tableView.rowHeight = 75
 
         tableView.separatorColor = .lightGray
 
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
     }
 }
 
@@ -50,5 +50,12 @@ extension ViewController {
         // cell.backgroundColor = .purple // Test cell display
 
         return cell // Display 5 cells
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        // Update cell status from Incomplete to Finished
+
+        tableView.deselectRow(at: indexPath, animated: true) // Cell doesn't stay hughlighted when tapped
     }
 }

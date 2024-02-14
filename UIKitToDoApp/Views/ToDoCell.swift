@@ -19,6 +19,14 @@ class ToDoCell: UITableViewCell {
         return label
     }()
 
+    private let statusLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Status: Incomplete"
+        label.font = .systemFont(ofSize: 18)
+        label.textColor = .white
+        return label
+    }()
+
     // MARK: Lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -29,6 +37,10 @@ class ToDoCell: UITableViewCell {
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
 
+        addSubview(statusLabel)
+        statusLabel.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, paddingTop: 4, paddingLeft: 8)
+
+//        UITableView.tableFooterView = UIView()
     }
 
     required init?(coder: NSCoder) {
