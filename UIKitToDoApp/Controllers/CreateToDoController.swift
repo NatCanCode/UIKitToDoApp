@@ -17,19 +17,33 @@ class CreateToDoController: UIViewController {
         label.font = .boldSystemFont(ofSize: 24)
         label.textColor = .white
         label.textAlignment = .center
+
         return label
+    }()
+
+    private let itemTextField: UITextField = {
+        let textField = UITextField()
+        textField.font = .systemFont(ofSize: 18)
+        textField.textColor = .black
+        textField.backgroundColor = .lightGray
+        textField.layer.cornerRadius = 8
+//        textField.keyboardAppearance = .dark
+//        textField.keyboardType = .numberPad
+
+        return textField
     }()
 
     private lazy var createButton: UIButton = {
         let button = UIButton()
         button.setTitle("Create item", for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .green
+        button.backgroundColor = .purple
+        button.layer.cornerRadius = 10
 
         button.addTarget(self, action: #selector(createItemPressed), for: .touchUpInside)
         return button
-    }
-
+    }()
 
     // MARK: Lifecycle
 
@@ -42,7 +56,8 @@ class CreateToDoController: UIViewController {
     // MARK: Selectors
 
     @objc func createItemPressed() {
-        print(#function) // Display function name
+//        print(#function) // Print out function name in console
+//        print(itemTextField.text) // Print out user input in console
     }
 
 
@@ -54,9 +69,22 @@ class CreateToDoController: UIViewController {
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
 
+        view.addSubview(itemTextField)
+        itemTextField.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 128, paddingLeft: 16, paddingRight: 16, height: 45)
+        itemTextField.delegate = self
+
         view.addSubview(createButton)
-        createButton.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 16, paddingBottom: 16, paddingRight: 16
-        )
+        createButton.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 32, paddingBottom: 32, paddingRight: 32, height: 50)
     }
 
+}
+
+// MARK: UITextFieldDelegate
+
+extension CreateToDoController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Press return to have the keyboard dismissed
+        return true
+    }
 }

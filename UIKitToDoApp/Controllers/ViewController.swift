@@ -11,6 +11,8 @@ class ViewController: UITableViewController {
 
     // MARK: Properties
 
+    // Task array from Model
+
     let reuseIdentifier = "ToDoCell"
 
     lazy var createNewButton: UIButton = {
