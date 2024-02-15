@@ -13,6 +13,19 @@ class ViewController: UITableViewController {
 
     // Task array from Model
 
+    // Check API call
+//    var toDoItems = [ToDoItem]() {
+//        didSet {
+//            print("ToDo items was set")
+//        }
+//    }
+
+    var toDoItems = [
+        ToDoItem(title: "Wash dishes", isComplete: true),
+        ToDoItem(title: "Feed the cats", isComplete: false),
+        ToDoItem(title: "Pay bills", isComplete: true)
+    ]
+
     let reuseIdentifier = "ToDoCell"
 
     lazy var createNewButton: UIButton = {
@@ -32,7 +45,12 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       configureTableView()
+        configureTableView()
+
+//        PostService.shared.fetchAllItems()
+//        PostService.shared.fetchAllItems { (allItems) in
+//            self.toDoItems = allItems
+//        }
     }
 
     // MARK: Selectors
@@ -71,7 +89,7 @@ class ViewController: UITableViewController {
 extension ViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return toDoItems.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,7 +97,12 @@ extension ViewController {
 
         // cell.backgroundColor = .purple // Test cell display
 
-        return cell // Display 5 cells
+//        return cell // Display 5 cells
+        var getCurrentTask = toDoItems[indexPath.row]
+        cell.titleLabel.text = getCurrentTask.title
+        
+
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

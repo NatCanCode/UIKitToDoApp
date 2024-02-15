@@ -11,7 +11,7 @@ class ToDoCell: UITableViewCell {
 
     // MARK: Properties
 
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Title"
         label.font = .boldSystemFont(ofSize: 24)
@@ -19,7 +19,7 @@ class ToDoCell: UITableViewCell {
         return label
     }()
 
-    private let statusLabel: UILabel = {
+    let statusLabel: UILabel = {
         let label = UILabel()
         label.text = "Status: Incomplete"
         label.font = .systemFont(ofSize: 18)
